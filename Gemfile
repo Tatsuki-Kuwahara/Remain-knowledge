@@ -19,6 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # vue関連のgem
 gem 'foreman'
+# sass系
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
 
 
 # Use Redis adapter to run Action Cable in production
