@@ -19,6 +19,9 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
+# dotenv
+.env
+
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
