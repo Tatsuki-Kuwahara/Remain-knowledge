@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>If you want to contact me, you send mail to below address.</p>
-    <p>test@example.com</p>
+    <p>何か不都合があれば下記メールにて、お問い合わせください</p>
+    <p>tatsuki.kuwahara@vitalize.co.jp</p>
   </div>
 </template>
