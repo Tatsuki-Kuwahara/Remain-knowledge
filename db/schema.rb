@@ -12,11 +12,29 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "task_id", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "task_id_on_articles", unique: true
+  end
+
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "article_id_on_tags", unique: true
+  end
+
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name", null: false
     t.boolean "is_done", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "user_id_on_tasks"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,10 +70,10 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
-    t.index ["confirmation_token"], name: "usrs_on_confirmation_token", unique: true
-    t.index ["email"], name: "usrs_on_email", unique: true
-    t.index ["reset_password_token"], name: "usrs_on_reset_password_token", unique: true
-    t.index ["unlock_token"], name: "usrs_on_unlock_token", unique: true
+    t.index ["confirmation_token"], name: "users_on_confirmation_token", unique: true
+    t.index ["email"], name: "users_on_email", unique: true
+    t.index ["reset_password_token"], name: "users_on_reset_password_token", unique: true
+    t.index ["unlock_token"], name: "users_on_unlock_token", unique: true
   end
 
 end

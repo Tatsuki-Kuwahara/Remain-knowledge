@@ -34,8 +34,8 @@ create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=u
   t.datetime 'updated_at'
   t.datetime 'deleted_at', null: true
 
-  t.index ['email'], name: 'usrs_on_email', unique: true
-  t.index ['reset_password_token'], name: 'usrs_on_reset_password_token', unique: true
-  t.index ['confirmation_token'], name: 'usrs_on_confirmation_token', unique: true
-  t.index ['unlock_token'], name: 'usrs_on_unlock_token', unique: true
+  t.index ['email'], name: 'users_on_email', unique: true
+  t.index ['reset_password_token'], name: 'users_on_reset_password_token', unique: true
+  t.index ['confirmation_token'], name: 'users_on_confirmation_token', unique: true
+  t.index ['unlock_token'], name: 'users_on_unlock_token', unique: true
 end

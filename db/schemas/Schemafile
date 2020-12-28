@@ -3,3 +3,5 @@
 
 require 'tasks.schema'
 require 'users.schema'
+require 'tags.schema'
+require 'articles.schema'
