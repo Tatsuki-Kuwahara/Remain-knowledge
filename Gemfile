@@ -23,9 +23,6 @@ gem 'foreman'
 gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'material_icons'
-# ログイン系
-gem 'devise'
-gem 'omniauth-twitter'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
